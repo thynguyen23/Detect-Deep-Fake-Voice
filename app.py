@@ -5,7 +5,7 @@ import librosa
 import base64
 
 # Load the pre-trained LSTM model
-model = tf.keras.models.load_model('D:/DeepFake/Web/cnn_lstm_fold_5.h5')
+model = tf.keras.models.load_model('cnn_lstm_fold_5.h5')
 
 # Function to extract features from audio file
 def extract_features(file_path, target_duration=60.0, sr=22050):
@@ -173,7 +173,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Display logo.
-logo_base64 = get_base64_image("D:/DeepFake/Logo/logo.png")
+logo_base64 = get_base64_image("logo.png")
 logo_html = f"""
     <div class="logo">
         <img src="data:image/png;base64,{logo_base64}" width="110"/>
